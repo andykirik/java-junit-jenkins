@@ -1,0 +1,10 @@
+javac -sourcepath src -d classes src/ak/*.java
+java -cp classes/ ak.HelloWorld
+
+javac -cp lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar -sourcepath src -d classes src/**/*.java
+
+java -cp classes/ ak.HelloWorld
+
+java -cp classes:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore tests.HelloWorldTest
+java -cp classes:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore tests.StrUtilsTest
+java -cp classes:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore tests.UtilsTest
